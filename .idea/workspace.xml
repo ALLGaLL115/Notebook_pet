@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a95da8a2-e9e9-432d-b2ab-b6f0875b8937" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Notebook.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/models/posts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/models/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/auth/shcemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/models/posts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/models/users.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/shcemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/shcemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/versions/95a002df049a_added_required_tables.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/versions/d3ccc1668e86_added_required_tables2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
