@@ -9,7 +9,7 @@ from alembic import context
 # access to the values within the .ini file in use.
 config = context.config
 from src.database import Base
-from src.auth.models import UserTable
+from src.models import User
 from src.config import settings
 
 # Interpret the config file for Python logging.

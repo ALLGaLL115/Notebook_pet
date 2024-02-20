@@ -90,7 +90,7 @@ def create_acces_token(data:dict, expires_delta: timedelta|None = None):
 
     
 
-async def get_current_user(db:Annotated[AsyncSession, Depends(get_async_session)], token: Annotated[Token, Depends(oauth2_scheme)]) :
+async def   get_current_user(db:Annotated[AsyncSession, Depends(get_async_session)], token: Annotated[Token, Depends(oauth2_scheme)]) :
     credential_exeption = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Couldnt validate credentials",
@@ -116,7 +116,7 @@ async def get_current_user(db:Annotated[AsyncSession, Depends(get_async_session)
 
 
 async def get_current_active_user(
-    current_user: Annotated[Token, Depends(get_current_user)]
+    current_user: Annotated[UserRead, Depends(get_current_user)]
 ):
        return current_user
 

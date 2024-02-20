@@ -1,16 +1,41 @@
+import time
 from fastapi import FastAPI, Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from typing import Annotated
-from sqlalchemy.orm import Mapped, mapped_column
-from .database import get_async_session, Base
-from pydantic import BaseModel  
-from .auth.router import router as auth_router
 
-app = FastAPI()
+from fastapi_cache import FastAPICache
+from fastapi_cache.backends.redis import RedisBackend
+from fastapi_cache.decorator import cache
+
+from redis import asyncio as aioredis 
+
+from contextlib import asynccontextmanager
+
+from .auth.router import router as auth_router
+from .tasks.router import router as tasks_router
+
+
+
+@asynccontextmanager
+async def lifespan(app:FastAPI):
+    redis =  aioredis.from_url("redis://localhost")
+    FastAPICache.init(RedisBackend(redis), prefix="fastapi_cache=")
+    yield
+    
+    
+
+
+app = FastAPI(lifespan=lifespan)
+
+
+@app.get("/long_operation")
+@cache(expire=60)
+async def index():
+    # time.sleep(2)
+    return "Maaaaaaaaany data"
+
 
 app.include_router(auth_router)
 
-
+app.include_router(tasks_router)
 
 
 

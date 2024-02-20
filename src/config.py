@@ -7,6 +7,10 @@ class Settings(BaseSettings):
     DB_USER: str
     DB_PASS: str
     DB_NAME: str
+
+    STMP_USER: str
+    STMP_PASS: str
+
     SECRET_KEY: str |None = None
     ALGORITHM: str |None = None
     ACCESS_TOKEN_EXPIRE_MINUTES: int |None = None
