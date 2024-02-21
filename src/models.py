@@ -86,8 +86,8 @@ class Notebook (Base):
 
 class AssotiationNoteNotebook(Base):
   __tablename__ = "assotiation_note_notebook"
-  notebook_id: Mapped[int] = mapped_column(ForeignKey("notebook_id"), primary_key=True)
-  note_id: Mapped[int] = mapped_column(ForeignKey("note_id"), primary_key=True)
+  notebook_id: Mapped[int] = mapped_column(ForeignKey("notebooks.id"), primary_key=True)
+  note_id: Mapped[int] = mapped_column(ForeignKey("notes.id"), primary_key=True)
 
 
 
