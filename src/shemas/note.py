@@ -4,8 +4,12 @@ class NoteBase(BaseModel):
     body: str | None = None
     title: str | None = None
     user_id: int
-    notebook_id: int
     notelist_id: int| None = None
+
+class NoteCreate(BaseModel):
+    body: str|None =None
+    title: str|None =None
+
 
 class NoteRead(NoteBase):
     id: int

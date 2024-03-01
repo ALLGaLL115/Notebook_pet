@@ -6,12 +6,14 @@ class NotelistCreate(BaseModel):
     noteboard_id: int
 
 
-class NotelistUpdate(NotelistCreate):
-    id:int
+class NotelistShema(NotelistCreate):
+    id: int 
+    title: int 
+    noteboard_id: int 
+    created_at: datetime 
+    updated_at: datetime 
     
 
-class NotelistRead(NotelistUpdate):
+class NotelistWithNotes(NotelistShema):
+  notes: list["Note"]
 
-    created_at: datetime
-    updated_at: datetime
-    notes: list["Note"]

@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 
-from ..auth.shemas import UserRead
-from ..auth.crud_utils import get_current_active_user
-from .task import send_email_report_dashboard
+from auth.shemas import UserRead
+from auth.crud_utils import get_current_active_user
+from task import send_email_report_dashboard
 
 
 router = APIRouter(

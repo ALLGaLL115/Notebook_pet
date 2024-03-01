@@ -7,10 +7,12 @@ from fastapi_cache.decorator import cache
 
 from redis import asyncio as aioredis 
 
+from api.user import router as user_router
+
 from contextlib import asynccontextmanager
 
-from .auth.router import router as auth_router
-from .tasks.router import router as tasks_router
+# from .auth.router import router as auth_router
+# from .tasks.router import router as tasks_router
 
 
 
@@ -32,10 +34,12 @@ async def index():
     # time.sleep(2)
     return "Maaaaaaaaany data"
 
+app.include_router(user_router)
 
-app.include_router(auth_router)
 
-app.include_router(tasks_router)
+# app.include_router(auth_router)
+
+# app.include_router(tasks_router)
 
 
 

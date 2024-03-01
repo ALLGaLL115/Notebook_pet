@@ -8,9 +8,9 @@ from alembic import context
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
-from src.database import Base
-from src.models import User
-from src.config import settings
+from database import Base
+from models import User
+from config import settings
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
